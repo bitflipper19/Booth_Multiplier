@@ -3,4 +3,5 @@ Parameterized Booth's multiplier in Verilog.
 
 # Block Diagram
 ![Block Diagram](https://github.com/bitflipper19/Booth_Multiplier/blob/main/block_diagram.png)
-Taken from ![here](https://vlabs.iitkgp.ac.in/coa/exp7/index.html)
+
+Taken from [here](https://vlabs.iitkgp.ac.in/coa/exp7/index.html)
