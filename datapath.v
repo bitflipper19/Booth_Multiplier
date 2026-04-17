@@ -16,9 +16,11 @@ Control Signals (Input from Controller):
 Others:
     1. data_in: Input data bus
     2. clk: Clock
+    3. result: output, valid only when done goes high
 */
 
 module datapath(
+    output [7:0] result,
     output [1:0] count, 
     output Q1, Q0, // Q0=(Q)-1
     input [3:0] data_in,
@@ -42,8 +44,13 @@ module datapath(
 
     add_sub AS0(AS, Y[8:5], X, add, sub);
 
+    /*
+    This counter counts for 4 steps, 1 step takes = 2 clk cycles
+    therefore, counter counts 8 clk cycles? (probably)
+    */
     cntr C0(count, rst_cntr, dec, clk);
 
     assign {Q1, Q0}=Y[1:0];
+    assign result=Y[8:1];
 
 endmodule
