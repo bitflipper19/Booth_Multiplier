@@ -1,0 +1,9 @@
+1. A more robust timing analysis, make sure
+   data is captured properly. Do acknowledge 
+   setup and hold timings, and incoporate
+   delays.
+
+2. Parameterize it
+
+3. Compare with a purely behavioral and easy to code
+   design

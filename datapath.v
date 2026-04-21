@@ -21,7 +21,7 @@ Others:
 
 module datapath(
     output [7:0] result,
-    output [1:0] count, 
+    output [2:0] count, 
     output Q1, Q0, // Q0=(Q)-1
     input [3:0] data_in,
     input load_mxd, load_mxr, clr_acc, load_acc, shift, rst_cntr, 

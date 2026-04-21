@@ -5,7 +5,7 @@ module top(
     input clk, rst, start
 );
 
-    wire [1:0] count; wire Q1, Q0, load_mxd, load_mxr, clr_acc, 
+    wire [2:0] count; wire Q1, Q0, load_mxd, load_mxr, clr_acc, 
     load_acc, shift, rst_cntr, dec, add, sub;
     datapath D0(
         result,

@@ -1,7 +1,7 @@
 module controller(
     output reg load_mxd, load_mxr, clr_acc, load_acc, shift, 
            dec, add, sub, done, rst_cntr, // control signals
-    input [1:0] count, // status signal
+    input [2:0] count, // status signal
     input Q1, Q0, clk, rst, start // status signals
 );
     reg [3:0] state;

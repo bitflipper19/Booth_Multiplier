@@ -16,12 +16,16 @@ module rs_pipo(
     input [3:0] AS, in,
     input clr_acc, load_acc, load_mxr, shift, clk
 );
-
     always @(posedge clk) begin
-        if(clr_acc) shf_reg<=9'b0;
-        else if(load_mxr) shf_reg[4:1]<=in;
-        else if(load_acc) shf_reg[8:5]<=AS;
-        else if(shift) shf_reg<={shf_reg[8], shf_reg[8:1]};
+        if(clr_acc) 
+            shf_reg <= 9'b0;
+        else if(load_mxr) 
+            shf_reg[4:1] <= in;
+        else if(load_acc && shift)
+            shf_reg <= {AS[3], AS, shf_reg[4:1]}; 
+        else if(load_acc) 
+            shf_reg[8:5] <= AS;
+        else if(shift) 
+            shf_reg <= {shf_reg[8], shf_reg[8:1]};
     end
-    
 endmodule
