@@ -39,3 +39,9 @@ iverilog *.v
 vvp a.out
 gtkwave bmx.vcd
 ```
+
+# Note
+This is a non-pipelined design with clear segregation of control path and data path. Like 
+every iterative design, it consumes __less power__ and takes __less area__ but comes at a
+cost of latency i.e. it takes several clock cycles to produce output. A pipelined design
+will have a higher throughput, but, will take more area and will be more power hungry.

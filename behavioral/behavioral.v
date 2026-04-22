@@ -49,7 +49,7 @@ module top(
 
             S2: rs_pipo[4:1]<=data_in;
 
-            S4: done=1'b1;
+            S4: done<=1'b1;
             S6: begin
                 rs_pipo<={rs_pipo[8], rs_pipo[8:1]};
                 cntr<=cntr-1'b1;

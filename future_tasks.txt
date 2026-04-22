@@ -7,3 +7,5 @@
 
 3. Compare with a purely behavioral and easy to code
    design
+
+4. COmpare with a pipelined/fast design
